@@ -11,18 +11,25 @@ data class Transaction(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id : Int = 0,
+
     @ColumnInfo(name = "title")
     var title:String,
+
     @ColumnInfo(name = "amount")
     var amount:Double,
+
     @ColumnInfo(name = "transactionType")
     var transactionType:String,
+
     @ColumnInfo(name = "tag")
     var tag:String,
+
     @ColumnInfo(name = "data")
     var data:String,
+
     @ColumnInfo(name = "note")
     var note:String,
+
     @ColumnInfo(name = "createdAt")
     var createdAt: Long = System.currentTimeMillis()
 ) : Serializable {
