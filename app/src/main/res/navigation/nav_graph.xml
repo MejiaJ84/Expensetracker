@@ -4,19 +4,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/inboxFragment">
+    app:startDestination="@id/dashboardFragment">
     <fragment
-        android:id="@+id/inboxFragment"
+        android:id="@+id/dashboardFragment"
         android:name="com.example.expensetracker.DashBoardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dash_board" />
     <fragment
-        android:id="@+id/helpFragment"
+        android:id="@+id/incomeFragment"
         android:name="com.example.expensetracker.IncomeFragment"
         android:label="View Income"
         tools:layout="@layout/fragment_income" />
     <fragment
-        android:id="@+id/sentItemsFragment"
+        android:id="@+id/addTransactionFragment"
         android:name="com.example.expensetracker.AddTransactionFragment"
         android:label="Add Transaction"
         tools:layout="@layout/fragment_add_transaction" />
