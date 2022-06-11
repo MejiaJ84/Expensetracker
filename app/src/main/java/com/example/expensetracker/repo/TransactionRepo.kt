@@ -18,5 +18,10 @@ class TransactionRepo(private val database: ExpenseDatabase) {
     fun getAllTransactions() = database.transactionDao.getAllTransactions()
 
     // get a single transaction of type expense or income
-    fun getTransaction(transactionType: String) = database.transactionDao.getTransaction(transactionType)
+    fun getAllOrSingleTransaction(transactionType: String) = if (transactionType == "Overall") {
+        getAllTransactions()
+    }
+    else {
+        database.transactionDao.getTransaction(transactionType)
+    }
 }
