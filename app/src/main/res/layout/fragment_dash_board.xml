@@ -55,13 +55,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="placeholder"
+                    android:textColor="@color/green"
                     android:textStyle="bold"
                     android:textSize="26sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/budget"
-                    android:textColor="#00FF00"
                     android:textSize="14sp"
                     android:textAllCaps="true"/>
             </LinearLayout>
@@ -76,13 +76,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="placeholder"
+                    android:textColor="@color/red"
                     android:textStyle="bold"
                     android:textSize="26sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/expense"
-                    android:textColor="#FF0000"
                     android:textSize="14sp"
                     android:textAllCaps="true"/>
             </LinearLayout>

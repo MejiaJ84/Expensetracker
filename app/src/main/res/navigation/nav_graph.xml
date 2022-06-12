@@ -11,11 +11,6 @@
         android:label="Dashboard"
         tools:layout="@layout/fragment_dash_board" />
     <fragment
-        android:id="@+id/incomeFragment"
-        android:name="com.example.expensetracker.IncomeFragment"
-        android:label="View Income"
-        tools:layout="@layout/fragment_income" />
-    <fragment
         android:id="@+id/addTransactionFragment"
         android:name="com.example.expensetracker.AddTransactionFragment"
         android:label="Add Transaction"

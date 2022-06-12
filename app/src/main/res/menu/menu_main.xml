@@ -7,10 +7,6 @@
             android:icon="@drawable/icons8_home_48px"
             android:title="@string/dashboard" />
         <item
-            android:id="@+id/incomeFragment"
-            android:icon="@drawable/icons8_money_mouth_face_48px"
-            android:title="@string/income" />
-        <item
             android:id="@+id/addTransactionFragment"
             android:icon="@drawable/icons8_transaction_list_64px"
             android:title="@string/add_transaction" />
