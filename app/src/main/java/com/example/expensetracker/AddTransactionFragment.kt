@@ -14,9 +14,11 @@ class AddTransactionFragment : Fragment() {
     private var _binding: FragmentAddTransactionBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView
-        (inflater: LayoutInflater, container: ViewGroup?, savedInstance: Bundle?
-    ): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentAddTransactionBinding.inflate(inflater, container, false)
         val view = binding.root
         val application = requireNotNull(this.activity).application
@@ -27,7 +29,6 @@ class AddTransactionFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         val adapter = TransactionItemAdapter()
-        binding.transactionList.adapter = adapter
         viewModel.transactions.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.data = it

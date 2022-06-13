@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class TransactionItemAdapter : RecyclerView.Adapter<TransactionItemAdapter.TransactionItemViewHolder>() {
@@ -29,7 +30,7 @@ class TransactionItemAdapter : RecyclerView.Adapter<TransactionItemAdapter.Trans
         companion object {
             fun inflateFrom(parent: ViewGroup): TransactionItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val view = layoutInflater.inflate(R.layout.fragment_add_transaction, parent, false)
+                val view = layoutInflater.inflate(R.layout.fragment_add_transaction, parent, false) as CardView
                 return TransactionItemViewHolder(view)
             }
         }
