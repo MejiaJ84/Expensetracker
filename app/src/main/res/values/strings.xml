@@ -7,4 +7,9 @@
     <string name="budget">Budget</string>
     <string name="expense">Expense</string>
     <string name="transactions">Transactions</string>
+    <string name="enter_transaction_label">Enter transaction label</string>
+    <string name="enter_transaction_amount">Enter Transaction amount</string>
+    <string name="save_transaction">Save Transaction</string>
+    <string name="label">label</string>
+    <string name="amount">amount</string>
 </resources>

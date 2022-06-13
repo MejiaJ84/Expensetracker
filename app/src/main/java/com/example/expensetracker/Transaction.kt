@@ -13,5 +13,5 @@ data class Transaction(
     var transactionLabel: String,
 
     @ColumnInfo(name = "transaction_amount")
-    var transactionAmount: Double
+    var transactionAmount: Double,
 )
