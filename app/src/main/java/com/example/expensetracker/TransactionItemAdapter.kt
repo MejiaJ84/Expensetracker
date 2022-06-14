@@ -24,7 +24,7 @@ class TransactionItemAdapter : RecyclerView.Adapter<TransactionItemAdapter.Trans
         holder.bind(item)
     }
 
-    class TransactionItemViewHolder(val rootView: View) : RecyclerView.ViewHolder(rootView) {
+    class TransactionItemViewHolder(val rootView: CardView) : RecyclerView.ViewHolder(rootView) {
         val transactionLabel = rootView.findViewById<TextView>(R.id.label)
         val transactionAmount = rootView.findViewById<TextView>(R.id.amount)
         companion object {

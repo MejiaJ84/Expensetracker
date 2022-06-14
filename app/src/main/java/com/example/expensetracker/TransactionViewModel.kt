@@ -13,7 +13,7 @@ class TransactionViewModel(val dao: TransactionDao) : ViewModel() {
 
 
     fun addTransaction() {
-        viewModelScope.launch {
+        viewModelScope.launch() {
             val transaction = Transaction(0, newTransactionLabel, newAmount.toDouble())
             dao.insert(transaction)
         }
