@@ -1,35 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinator"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <LinearLayout
+    >
+    <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/balance_layout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_balance"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$300"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dashboard"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph"/>
-    </LinearLayout>
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/menu_main" />
-</androidx.drawerlayout.widget.DrawerLayout>
+            android:layout_height="wrap_content"
+            android:layout_below="@id/balance_layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/budget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$400"
+                        android:textStyle="bold"
+                        android:textSize="32sp"
+                        android:textColor="@color/green"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/budget"
+                        android:textSize="17sp"
+                        android:textAllCaps="true"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/expense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$400"
+                        android:textStyle="bold"
+                        android:textSize="32sp"
+                        android:textColor="@color/red"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expense"
+                        android:textSize="17sp"
+                        android:textAllCaps="true"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/recyclerview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transactions"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textAllCaps="true"
+            android:layout_below="@id/dashboard"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/recyclerview_title"
+            android:layout_margin="10dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_add"
+            android:backgroundTint="@color/red"
+            app:tint="@color/white"
+            app:borderWidth="0dp"/>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
